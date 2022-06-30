@@ -7,7 +7,7 @@
   <h5>{{ atendimento.orientador }}</h5>
   <p>{{ atendimento.descricao }}</p>
   <ng-template pTemplate="footer">
-    <button pButton label="Editar" class="p-button-primary" icon="pi pi-pencil"></button>
+    <button pButton label="Editar" class="p-button-primary" icon="pi pi-pencil" (click)="editar(atendimento, $event)"></button>
   </ng-template>
 </p-card>
 

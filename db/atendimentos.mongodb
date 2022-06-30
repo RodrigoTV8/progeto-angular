@@ -4,6 +4,7 @@ db.atendimentos.drop();
 
 db.atendimentos.insertOne(
   {
+    '_id': 1,
     'escola': 'Escola 1',
     'data': '30/06/2022',
     'orientador': 'Professor X',

@@ -1,4 +1,4 @@
-<form [formGroup]="formGroup"  class="card">
+<form [formGroup]="formGroup"  (ngSubmit)="enviarForm(formGroup.value)" class="card">
   <h5>Atendimento</h5>
   <div class="field">
     <label for="titulo">Escola</label>
@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <label for="url-artigo">Descrição</label>
-    <input pInputText formControlName="descicao" id="descicao" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    <input pInputText formControlName="descricao" id="descricao" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
     <small> Descrição do atendimento </small>
   </div>
 

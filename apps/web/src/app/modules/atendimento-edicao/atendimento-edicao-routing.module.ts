@@ -4,7 +4,7 @@ import { AtendimentoEdicaoComponent } from './componets/atendimento-edicao/atend
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id-atendimento',
     component: AtendimentoEdicaoComponent,
   }
 ];

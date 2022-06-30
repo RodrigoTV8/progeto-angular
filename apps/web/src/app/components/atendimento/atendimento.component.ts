@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnDestroy} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { MessageService } from 'primeng/api';
@@ -11,7 +11,7 @@ import { AtendimentoService } from '../../services/atendimento.service';
   templateUrl: './atendimento.component.html',
   styleUrls: ['./atendimento.component.css']
 })
-export class AtendimentoComponent implements OnInit {
+export class AtendimentoComponent implements OnDestroy {
 
   public escola: FormControl = new FormControl(
     '',
@@ -44,9 +44,6 @@ export class AtendimentoComponent implements OnInit {
     private messageService: MessageService,
     private router: Router
   ) { }
-
-  ngOnInit(): void {
-  }
 
   ngOnDestroy(): void {
     this.subDestruction.next();
