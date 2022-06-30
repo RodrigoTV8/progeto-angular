@@ -1,0 +1,18 @@
+use('app-projeto');
+
+db.usuarios.drop();
+
+db.usuarios.insertMany([
+  {
+    '_id': 1,
+    'username': 'admin',
+    'password': 'admin',
+    'administrador': true,
+  },
+  {
+    '_id': 2,
+    'username': 'rodrigo',
+    'password': 'vidal',
+    'administrador': false,
+  },
+]);
