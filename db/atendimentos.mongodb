@@ -1,0 +1,12 @@
+use('app-projeto');
+
+db.atendimentos.drop();
+
+db.atendimentos.insertOne(
+  {
+    'escola': 'Escola 1',
+    'data': '30/06/2022',
+    'orientador': 'Professor X',
+    'descricao': 'Descrição do atendimento 1',
+  }
+);

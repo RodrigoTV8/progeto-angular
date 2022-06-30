@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { HomeComponent } from "./components/home/home.component";
+import { AtendimentoComponent } from "./components/atendimento/atendimento.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,18 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    children: [
+      {
+        path: 'atendimento',
+        component: AtendimentoComponent
+      },
+      {
+        path: 'atendimento-edicao',
+        loadChildren: () => import(
+          './modules/atendimento-edicao/atendimento-edicao.module'
+        ).then(mod => mod.AtendimentoEdicaoModule)
+      }
+    ]
   },
   {
     path: '**',

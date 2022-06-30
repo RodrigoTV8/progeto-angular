@@ -1,0 +1,27 @@
+<form [formGroup]="formGroup"  class="card">
+  <h5>Atendimento</h5>
+  <div class="field">
+    <label for="titulo">Escola</label>
+    <input pInputText formControlName="escola" autofocus id="escola" type="text"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    <small> Nome da escola atendida</small>
+  </div>
+  <div class="field">
+    <label for="descricao">Data</label>
+    <input pInputText formControlName="data" id="data" type="text"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    <small> Data em que o atendimento foi realizado</small>
+  </div>
+  <div class="field">
+    <label for="url-imagem">Orientador</label>
+    <input pInputText formControlName="orientador" id="orientador" type="text"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    <small> Nome do orientador que realizou a ação </small>
+  </div>
+  <div class="field">
+    <label for="url-artigo">Descrição</label>
+    <input pInputText formControlName="descicao" id="descicao" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    <small> Descrição do atendimento </small>
+  </div>
+
+  <button pButton icon="pi pi-save" label="Salvar" type="submit" [disabled]="formGroup.invalid" >
+
+  </button>
+</form>

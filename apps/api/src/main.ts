@@ -11,7 +11,8 @@
 
  import { json } from 'body-parser';
 
- import { router as authRoute } from './app/routes/auth'
+ import { router as authRoute } from './app/routes/auth';
+ import { router as atendimentosRoute } from './app/routes/atendimento';
  import { requireJwtToken } from './app/midlewares/jwt';
 
  MongoClient.connect(
@@ -39,6 +40,7 @@
 
  app.use(requireJwtToken);
 
+ app.use('/api/atendimentos', atendimentosRoute);
 
  const port = process.env.port || 3333;
  const server = app.listen(port, () => {
