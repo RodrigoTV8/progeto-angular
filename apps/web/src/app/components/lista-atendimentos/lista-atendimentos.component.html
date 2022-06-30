@@ -1,0 +1,14 @@
+<a
+  *ngFor="let atendimento of (atendimentos$ | async )"
+  target="_blank"
+  rel="noreferrer"
+>
+<p-card [header]="atendimento.escola" [subheader]="atendimento.data" [style]="{width: '100%', height: '100%', display: 'block'}" styleClass="p-card-shadow">
+  <h5>{{ atendimento.orientador }}</h5>
+  <p>{{ atendimento.descricao }}</p>
+  <ng-template pTemplate="footer">
+    <button pButton label="Editar" class="p-button-primary" icon="pi pi-pencil"></button>
+  </ng-template>
+</p-card>
+
+</a>

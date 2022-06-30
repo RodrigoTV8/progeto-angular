@@ -19,4 +19,10 @@ export class AtendimentoService {
       atendimento
     );
   }
+
+  public getAll(): Observable<IAtendimento[]>{
+    return this.httpClient.get<IAtendimento[]>(
+      'http://localhost:3333/api/atendimentos'
+    )
+  }
 }

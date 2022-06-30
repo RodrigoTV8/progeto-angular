@@ -19,12 +19,14 @@ import { MessageService } from 'primeng/api';
 import { AuthModule } from './modules/auth/auth.module';
 import { JwtInterceptor } from './jwt.interceptor';
 import { AtendimentoComponent } from './components/atendimento/atendimento.component';
+import { ListaAtendimentosComponent } from './components/lista-atendimentos/lista-atendimentos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AtendimentoComponent,
+    ListaAtendimentosComponent,
   ],
   imports: [
     BrowserModule,
