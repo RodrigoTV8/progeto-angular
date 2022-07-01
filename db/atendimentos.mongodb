@@ -2,12 +2,40 @@ use('app-projeto');
 
 db.atendimentos.drop();
 
-db.atendimentos.insertOne(
+db.atendimentos.insertMany([
   {
-    '_id': 1,
+    _id: 1,
     'escola': 'Escola 1',
     'data': '30/06/2022',
     'orientador': 'Professor X',
     'descricao': 'Descrição do atendimento 1',
+  },
+  {
+    _id: 2,
+    'escola': 'Escola 2',
+    'data': '30/06/2022',
+    'orientador': 'Professor Y',
+    'descricao': 'Descrição do atendimento 2',
+  },
+  {
+    _id: 3,
+    'escola': 'Escola 3',
+    'data': '01/07/2022',
+    'orientador': 'Professor Z',
+    'descricao': 'Descrição do atendimento 3',
+  },
+  {
+    _id: 4,
+    'escola': 'Escola 4',
+    'data': '01/07/2022',
+    'orientador': 'Professor W',
+    'descricao': 'Descrição do atendimento 4',
+  },
+  {
+    _id: 5,
+    'escola': 'Escola 5',
+    'data': '01/07/2022',
+    'orientador': 'Professor A',
+    'descricao': 'Descrição do atendimento 5',
   }
-);
+]);
